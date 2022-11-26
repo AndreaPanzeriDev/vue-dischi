@@ -1,48 +1,36 @@
 <template>
   <div id="app">
     <HeaderComp />
+    <MainComp/>
   </div>
 </template>
 
 <script>
  import HeaderComp from './components/HeaderComp.vue';
- import axios from 'axios';
+ import MainComp from './components/MainComp.vue'
+ 
 
 
  export default { 
   name: 'App',
   components: {
-    HeaderComp
+    HeaderComp,
+    MainComp
   },
-  data(){
-    return{
-      //all the data
-      dataSpotify: '',
-    }
-  },
-  mounted() {
-    this.getInfo();
-  },
-  methods:{
-    
-    getInfo(){
-      axios.get('https://flynn.boolean.careers/exercises/api/array/music').then( (response) => {
-        this.dataSpotify = response.data
-      } )
-    }
-  }
+  
  }
 </script>
 
 
 
-<style lang="scss">
+<style scoped lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  background: #1e2d3b;
+  height: 100vh;
 }
 
 body {
-  background-color: #1e2d3b;
   padding: 0;
   margin: 0;
   box-sizing: border-box;

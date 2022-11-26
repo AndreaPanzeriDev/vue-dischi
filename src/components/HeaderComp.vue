@@ -22,7 +22,7 @@ header{
 }
 
 header > div > img{
-    width: 75px;
+    width: 100px;
     padding: 10px 20px;
 }
 
