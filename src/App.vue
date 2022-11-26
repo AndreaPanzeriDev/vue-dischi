@@ -1,15 +1,15 @@
 <template>
   <div id="app">
-    <HeaderComp/>
+    <HeaderComp />
   </div>
 </template>
 
 <script>
-import HeaderComp from './components/HeaderComp.vue';
-//import axios from 'axios';
+ import HeaderComp from './components/HeaderComp.vue';
+ import axios from 'axios';
 
 
-export default {
+ export default { 
   name: 'App',
   components: {
     HeaderComp
@@ -17,26 +17,31 @@ export default {
   data(){
     return{
       //all the data
+      dataSpotify: '',
     }
   },
-  mounted(){
-    console.log("ok i'm working on it")
+  mounted() {
+    this.getInfo();
   },
-  methods(){
-
+  methods:{
+    
+    getInfo(){
+      axios.get('https://flynn.boolean.careers/exercises/api/array/music').then( (response) => {
+        this.dataSpotify = response.data
+      } )
+    }
   }
-}
+ }
 </script>
 
 
 
 <style lang="scss">
-
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
-body{
+body {
   background-color: #1e2d3b;
   padding: 0;
   margin: 0;
