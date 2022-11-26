@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="cards">
-        
+        <CardComp/>
     </div>
   </main>
 </template>
