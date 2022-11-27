@@ -1,14 +1,17 @@
 <template>
   <div class="card">
-    <img :src="singleItem.poster" alt="poster">
-    <h1>{{ singleItem.year }}</h1>
+    <img :src="singleItem.poster" alt="p">
+    <h1>{{ singleItem.title}}</h1>
+    <div class="infoArtist"> {{ singleItem.author}}</div>
+    <div class="infoArtist"> {{ singleItem.year}}</div>
   </div>
 </template>
 
 <script>
 export default {
+  name: 'CardComp',
   props: {
-    singleItem: Object,
+    singleItem: Object
   },
   methods: {
     
@@ -16,19 +19,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 .card{
   background-color: #2e3a46;
+  width: calc(100% / 5 - 5px);
   padding: 10px;
-  width: calc(100% / 6 - 5px);
   margin: 0 2.5px;
   text-align: center;
 }
 
-.card > h2{
+.card > h1{
   color: white;
   font-weight: bold;
+  font-size: inherit ;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
 
+.infoArtist{
+  color: lightgray;
 }
 </style>
