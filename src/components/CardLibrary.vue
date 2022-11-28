@@ -43,6 +43,7 @@ export default {
         if (!this.dataGenre.includes(element.genre)) {
           this.dataGenre.push(element.genre);
         }
+        this.$emit('emitGenre', this.dataGenre)
       });
     },
   },

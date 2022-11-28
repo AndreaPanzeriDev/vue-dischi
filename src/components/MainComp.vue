@@ -3,9 +3,9 @@
     <div>
       <select class="form-select" aria-label="Default select example">
         <option selected>Open this select menu</option>
-        
+        <option :value="elem" v-for="(elem, index) in arrayGenre" :key="index">{{elem}}</option>
       </select>
-      <CardLibrary />
+      <CardLibrary @emitGenre="methodsGenreList"/>
     </div>
   </main>
 </template>
@@ -17,6 +17,17 @@ export default {
   components: {
     CardLibrary,
   },
+  data(){
+    return{
+      arrayGenre: [],
+      optionSelected : '',
+    }
+  },
+  methods: {
+    methodsGenreList(valoreEmit){
+      this.arrayGenre = valoreEmit
+    }
+  }
 };
 </script>
 
