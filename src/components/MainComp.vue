@@ -20,17 +20,29 @@ export default {
     return{
       //all the data
       dataSpotify: [],
+      dataGenre: [],
     }
   },
   mounted() {
     this.getInfo();
   },
   methods:{
-    
+
+    //get data from API
     getInfo(){
       axios.get('https://flynn.boolean.careers/exercises/api/array/music').then( (response) => {
-        this.dataSpotify = response.data.response
+        this.dataSpotify = response.data.response;
+        this.getGenre();
       } )
+    },
+
+    //create the array with all the genre
+    getGenre(){
+      this.dataSpotify.forEach((element)  =>{
+        if(!this.dataGenre.includes(element.genre)){
+          this.dataGenre.push(element.genre)
+        }
+      })
     }
   }
 }
