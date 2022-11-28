@@ -24,7 +24,7 @@ export default {
 .card{
   background-color: #2e3a46;
   width: calc(100% / 5 - 15px);
-  height: 300px;
+  height: 400px;
   padding: 10px;
   margin: 25px auto;
   text-align: center;
