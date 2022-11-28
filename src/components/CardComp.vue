@@ -1,27 +1,26 @@
 <template>
   <div class="card">
-    <img :src="singleItem.poster" alt="p">
-    <h1>{{ singleItem.title}}</h1>
-    <div class="infoArtist"> {{ singleItem.author}}</div>
-    <div class="infoArtist year"> {{ singleItem.year}}</div>
+    <img :src="singleItem.poster" alt="p" />
+    <h1>{{ singleItem.title }}</h1>
+    <div class="infoArtist">{{ singleItem.author }}</div>
+    <div class="infoArtist year">{{ singleItem.year }}</div>
   </div>
 </template>
 
+
+
 <script>
 export default {
-  name: 'CardComp',
+  name: "CardComp",
   props: {
-    singleItem: Object
+    singleItem: Object,
   },
-  methods: {
-    
-  }
-}
+  methods: {},
+};
 </script>
 
 <style scoped lang="scss">
-
-.card{
+.card {
   background-color: #2e3a46;
   width: calc(100% / 5 - 15px);
   height: 400px;
@@ -30,7 +29,7 @@ export default {
   text-align: center;
 }
 
-.card > h1{
+.card > h1 {
   color: white;
   font-weight: bold;
   font-size: inherit;
@@ -38,11 +37,11 @@ export default {
   text-transform: uppercase;
 }
 
-.infoArtist{
+.infoArtist {
   color: #868174;
 }
 
-.year{
+.year {
   font-size: small;
 }
 </style>
