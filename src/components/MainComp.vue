@@ -1,11 +1,11 @@
 <template>
   <main>
     <div>
-      <select class="form-select" aria-label="Default select example">
+      <select class="form-select" aria-label="Default select example" v-model="optionSelected">
         <option selected>Open this select menu</option>
         <option :value="elem" v-for="(elem, index) in arrayGenre" :key="index">{{elem}}</option>
       </select>
-      <CardLibrary @emitGenre="methodsGenreList"/>
+      <CardLibrary @emitGenre="methodsGenreList" :userChoise="optionSelected"/>
     </div>
   </main>
 </template>

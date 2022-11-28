@@ -16,6 +16,9 @@ export default {
   components: {
     CardComp,
   },
+  props: {
+    userChoise: String
+  },
   data() {
     return {
       //all the data
