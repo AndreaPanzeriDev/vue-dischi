@@ -14,6 +14,7 @@
 import CardLibrary from "./CardLibrary.vue";
 
 export default {
+  name: "MainComp",
   components: {
     CardLibrary,
   },
