@@ -27,6 +27,7 @@
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   background: #1e2d3b;
+  height: 100vh;
   
 }
 
