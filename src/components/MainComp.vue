@@ -34,6 +34,7 @@ export default {
         this.dataSpotify = response.data.response;
         this.getGenre();
       } )
+      
     },
 
     //create the array with all the genre
