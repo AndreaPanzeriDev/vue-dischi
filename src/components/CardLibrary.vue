@@ -4,6 +4,7 @@
       v-for="(elem, index) in dataSpotify"
       :key="index"
       :singleItem="elem"
+      :userChoise="userChoise"
     />
   </div>
 </template>

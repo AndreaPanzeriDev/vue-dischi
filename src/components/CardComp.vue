@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" v-if="singleItem.genre.includes(userChoise)">
     <img :src="singleItem.poster" alt="p" />
     <h1>{{ singleItem.title }}</h1>
     <div class="infoArtist">{{ singleItem.author }}</div>
@@ -14,6 +14,7 @@ export default {
   name: "CardComp",
   props: {
     singleItem: Object,
+    userChoise: String
   },
   methods: {},
 };
